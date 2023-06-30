@@ -2,6 +2,7 @@ import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
 
 import useCurrentUser from "@/hooks/useCurrentUser";
+import { useRouter } from "next/router";
 
 export async function getServerSideProps(context:NextPageContext) {
     const session = await getSession(context);
@@ -22,6 +23,8 @@ export async function getServerSideProps(context:NextPageContext) {
 }
 
 const Profiles = () => {
+
+    const router = useRouter();
 
     const { data: user } = useCurrentUser();
 
@@ -46,7 +49,7 @@ const Profiles = () => {
                 flex items-center justify-center gap-8 mt-10"
                 >
                     <div 
-                    onClick={() => {}}
+                    onClick={() => router.push('/')}
                     >
                         <div 
                         className="

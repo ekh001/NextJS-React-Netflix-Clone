@@ -42,7 +42,7 @@ const Profiles = () => {
                 className="
                 text-3xl md:text-6xl text-white text-center"
                 >
-                    Who's watching?
+                    Who is watching?
                 </h1>
                 <div 
                 className="
